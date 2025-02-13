@@ -97,40 +97,41 @@ const Hero = () => {
           {/* Badge */}
           <div className={`inline-block transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-light/10 text-primary-dark">
-              Discover Light Therapy
+              Advanced Light Therapy Solutions
             </span>
           </div>
 
           {/* Main Heading */}
           <h1 className={`mt-6 font-playfair transition-all duration-700 delay-300 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <span className="block text-4xl sm:text-6xl font-semibold text-neutral-900">
-              Transform Your Wellness
+              Rejuvenate Your Body,<br />Restore Your Energy
             </span>
             <span className="block text-xl sm:text-2xl mt-3 text-neutral-600">
-              Southeast Asia's Premier Light Therapy Solutions
+              FDA-Cleared Light Therapy for Enhanced Wellness
             </span>
           </h1>
 
           {/* Description */}
           <p className={`mt-6 max-w-2xl mx-auto text-lg text-neutral-600 transition-all duration-700 delay-500 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            Experience the future of wellness with our cutting-edge light therapy technology. 
-            Scientifically proven, personally transformative.
+            Experience clinically proven light therapy for anti-aging, pain relief, 
+            improved sleep, and enhanced cellular regeneration. Join thousands of 
+            satisfied clients on their journey to optimal health.
           </p>
 
           {/* CTA Buttons */}
           <div className={`mt-10 flex justify-center gap-4 transition-all duration-700 delay-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <button className="group inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-colors">
-              Experience the Glow
+              Schedule Free Consultation
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-primary-dark bg-primary-light/10 hover:bg-primary-light/20 transition-colors">
-              Learn More
+              Shop Products
             </button>
           </div>
 
           {/* Trust Badges */}
           <div className={`mt-16 transition-all duration-700 delay-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <p className="text-sm font-medium text-neutral-600 mb-4">Trusted by Leading Healthcare Providers</p>
+            <p className="text-sm font-medium text-neutral-600 mb-4">FDA-Cleared Technology | Clinically Proven Results | 100% Safe</p>
             <div className="flex justify-center space-x-8 opacity-75">
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="h-8 w-24 bg-neutral-200 rounded-md animate-pulse"></div>
