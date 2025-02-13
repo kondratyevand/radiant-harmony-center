@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 const HowItWorks = () => {
@@ -26,16 +25,16 @@ const HowItWorks = () => {
       wavelength: "900-1200nm",
       description: "Penetrates deepest into the body, supporting full-body healing and cellular regeneration.",
       benefits: ["Joint Pain Relief", "Deep Healing", "Circulation Boost"],
-      color: "bg-accent",
-      gradient: "from-accent/20 via-accent/10 to-transparent"
+      color: "bg-primary",
+      gradient: "from-primary/20 via-primary/10 to-transparent"
     }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-secondary/30 to-white relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(13,71,161,0.1),transparent_40%)] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(38,166,154,0.1),transparent_40%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(211,228,253,0.1),transparent_40%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(254,247,205,0.1),transparent_40%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
@@ -56,7 +55,7 @@ const HowItWorks = () => {
               onClick={() => setActiveTab(index)}
               className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeTab === index
-                  ? `${tech.color} text-white shadow-lg scale-105`
+                  ? `${tech.color} text-primary-foreground shadow-lg scale-105`
                   : "bg-white text-neutral-600 hover:bg-neutral-100 hover:scale-105 hover:shadow-md"
               }`}
             >

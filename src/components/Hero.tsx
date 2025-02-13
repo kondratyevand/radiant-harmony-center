@@ -54,7 +54,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-neutral-50 to-neutral-100">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-secondary/50 to-white">
       {/* Falling Items Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {items.map((item) => (
@@ -88,15 +88,15 @@ const Hero = () => {
 
       {/* Glowing Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-light/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-glow"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent-light/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-glow animation-delay-2000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-glow"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-glow animation-delay-2000"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className={`text-center`}>
           {/* Badge */}
           <div className={`inline-block transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-light/10 text-primary-dark">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary text-primary-foreground">
               Advanced Light Therapy Solutions
             </span>
           </div>
@@ -120,11 +120,11 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className={`mt-10 flex justify-center gap-4 transition-all duration-700 delay-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <button className="group inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-primary-dark transition-colors">
+            <button className="group inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-primary-foreground bg-primary hover:bg-primary-dark transition-colors">
               Schedule Free Consultation
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-primary-dark bg-primary-light/10 hover:bg-primary-light/20 transition-colors">
+            <button className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-primary-foreground bg-secondary hover:bg-secondary-dark transition-colors">
               Shop Products
             </button>
           </div>
