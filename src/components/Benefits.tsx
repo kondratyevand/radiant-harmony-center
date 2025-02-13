@@ -51,8 +51,14 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-white relative overflow-hidden">
+      {/* Animated Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute w-96 h-96 -top-48 -right-48 bg-primary rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
+        <div className="absolute w-96 h-96 -bottom-48 -left-48 bg-accent rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-playfair font-semibold text-neutral-900 mb-4">
             Scientifically Proven Benefits
@@ -71,9 +77,9 @@ const Benefits = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="h-full p-8 bg-neutral-50 rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white">
-                <div className={`w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-white/10 group-hover:text-white ${
-                  hoveredIndex === index ? "scale-110" : ""
+              <div className="h-full p-8 bg-neutral-50 rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-xl hover:-translate-y-1">
+                <div className={`w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-white/10 group-hover:text-white transform ${
+                  hoveredIndex === index ? "scale-110 rotate-3" : ""
                 }`}>
                   {benefit.icon}
                 </div>
@@ -84,13 +90,16 @@ const Benefits = () => {
                   {benefit.description}
                 </p>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-bold">{benefit.stats[0]}</span>
+                  <span className="text-2xl font-bold animate-pulse">{benefit.stats[0]}</span>
                   <span className={`text-sm transition-colors duration-300 ${
                     hoveredIndex === index ? "text-white/90" : "text-neutral-600"
                   }`}>
                     {benefit.stats[1]}
                   </span>
                 </div>
+                
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
               </div>
             </div>
           ))}
