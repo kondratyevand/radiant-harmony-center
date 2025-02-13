@@ -18,13 +18,19 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-secondary/80 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <span className="text-xl font-playfair font-semibold text-neutral-900">PRESENT FUTURE LAB</span>
+            <div className="flex items-center space-x-2">
+              <img
+                src="/lovable-uploads/baeaa33a-05b6-479b-97ff-12eacc9b0f07.png"
+                alt="PF Logo"
+                className="h-12 w-auto"
+              />
+            </div>
           </div>
           
           {/* Desktop Navigation */}
@@ -32,7 +38,7 @@ const Navbar = () => {
             <NavLink href="#products">Products</NavLink>
             <NavLink href="#science">Science</NavLink>
             <NavLink href="#business">For Business</NavLink>
-            <button className="px-6 py-2 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors font-inter">
+            <button className="px-6 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary-dark transition-colors font-inter">
               Shop Now
             </button>
           </div>
@@ -50,12 +56,12 @@ const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg rounded-b-2xl border-t">
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-secondary/95 backdrop-blur-md shadow-lg rounded-b-2xl border-t">
             <div className="px-4 pt-2 pb-6 space-y-4">
               <MobileNavLink href="#products">Products</MobileNavLink>
               <MobileNavLink href="#science">Science</MobileNavLink>
               <MobileNavLink href="#business">For Business</MobileNavLink>
-              <button className="w-full px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors font-inter">
+              <button className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary-dark transition-colors font-inter">
                 Shop Now
               </button>
             </div>
