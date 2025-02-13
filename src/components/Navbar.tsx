@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <Sun className="h-8 w-8 text-gold-500" />
-            <span className="ml-2 text-xl font-playfair font-semibold">Lumina</span>
+            <span className="ml-2 text-xl font-playfair font-semibold">PRESENT FUTURE LAB</span>
           </div>
           
           {/* Desktop Navigation */}
